@@ -62,7 +62,7 @@
         combo_settings {
             timeout-ms = <300>;
             key-positions = <30 31>;
-            bindings = <&mo 4>;
+            bindings = <&mo 5>;
         };
     };
 
@@ -80,8 +80,6 @@
             >;
         };
 
-        // Numbers and high frequency symbols
-
         sym_layer {
             bindings = <
 &kp N1            &kp N2       &kp N3                 &kp N4          &kp N5               &kp N6       &kp N7           &kp N8             &kp N9       &kp N0
@@ -91,18 +89,14 @@
             >;
         };
 
-        // Main modifiers and arrow keys
-
         ext_layer {
             bindings = <
-&kp ESC    &trans     &trans      &trans     &trans       &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
+&kp ESC    &trans     &trans      &to 4      &trans       &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
 &sk LALT   &sk LGUI   &sk LSHIFT  &sk LCTRL  &kp RALT     &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
 &kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp TAB    &kp LC(V)    &kp LC(BSPC)  &kp BSPC  &trans    &trans     &trans
                                   &trans     &kp LCTRL    &kp ENTER     &mo 3
             >;
         };
-
-        // Function keys with modifiers
 
         fnc_layer {
             bindings = <
@@ -113,9 +107,14 @@
             >;
         };
 
-        // Low frequency symbols.
-        // Used to type regional accents.
-        // Used to change the keyboard's settings.
+        gaming_layer {
+            bindings = <
+&kp Q  &kp W  &kp E  &kp R   &kp T        &kp Y      &kp U  &kp I      &kp O       &kp P
+&kp A  &kp S  &kp D  &kp F   &kp G        &kp H      &kp J  &kp K      &kp L       &kp SEMICOLON
+&kp Z  &kp X  &kp C  &kp V   &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+                     &trans  &kp SPACE    &kp SPACE  &to 0
+            >;
+        };
 
         settings_layer {
             bindings = <
