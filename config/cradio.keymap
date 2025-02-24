@@ -80,8 +80,6 @@
             >;
         };
 
-        // Numbers and high frequency symbols
-
         sym_layer {
             bindings = <
 &kp N1            &kp N2       &kp N3                 &kp N4          &kp N5               &kp N6       &kp N7           &kp N8             &kp N9       &kp N0
@@ -91,38 +89,30 @@
             >;
         };
 
-        // Main modifiers and arrow keys
-
         ext_layer {
             bindings = <
-&kp ESC    &trans     &trans      &trans     &trans       &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
-&sk LALT   &sk LGUI   &sk LSHIFT  &sk LCTRL  &kp RALT     &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
-&kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp TAB    &kp LC(V)    &kp LC(BSPC)  &kp BSPC  &trans    &trans     &trans
-                                  &trans     &kp LCTRL    &kp ENTER     &mo 3
+&kp ESC    &trans     &trans      &trans     &trans       &kp PG_UP  &kp HOME  &kp RC(BACKSPACE)  &kp END   &kp DEL
+&sk LALT   &sk LGUI   &sk LSHIFT  &sk LCTRL  &kp RALT     &kp PG_DN  &kp LEFT  &kp UP             &kp DOWN  &kp RIGHT
+&kp LC(Z)  &kp LC(X)  &kp LC(C)   &kp TAB    &kp LC(V)    &trans     &kp BSPC  &trans             &trans    &trans
+                                  &trans     &kp LCTRL    &kp ENTER  &mo 3
             >;
         };
-
-        // Function keys with modifiers
 
         fnc_layer {
             bindings = <
-&kp F1    &kp F2    &kp F3      &kp F4     &kp F5      &kp F6   &kp F7   &kp F8           &kp F9  &kp F10
-&sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT    &kp F11  &kp F12  &kp PRINTSCREEN  &trans  &trans
-&none     &none     &none       &none      &none       &none    &none    &none            &none   &none
-                                &none      &none       &none    &none
+&kp F1    &kp F2    &kp F3      &kp F4             &kp F5             &kp F6        &kp F7        &kp F8           &kp F9  &kp F10
+&sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL          &kp RALT           &kp F11       &kp F12       &kp PRINTSCREEN  &trans  &trans
+&none     &kp C_PP  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp C_BRI_UP  &kp C_BRI_DN  &none            &none   &none
+                                &none              &none              &none         &none
             >;
         };
 
-        // Low frequency symbols.
-        // Used to type regional accents.
-        // Used to change the keyboard's settings.
-
         settings_layer {
             bindings = <
-&bootloader  &none  &none  &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 3  &none  &unstick  &none  &bootloader
-&none        &none  &none  &none       &bt BT_SEL 1    &bt BT_SEL 4  &none  &none     &none  &none
-&none        &none  &none  &none       &bt BT_SEL 2    &bt BT_SEL 5  &none  &none     &none  &none
-                           &none       &none           &none         &none
+&bootloader  &none  &none  &bt BT_CLR      &bt BT_SEL 0    &bt BT_SEL 3  &none  &unstick  &none  &bootloader
+&none        &none  &none  &studio_unlock  &bt BT_SEL 1    &bt BT_SEL 4  &none  &none     &none  &none
+&none        &none  &none  &none           &bt BT_SEL 2    &bt BT_SEL 5  &none  &none     &none  &none
+                           &none           &none           &none         &none
             >;
         };
     };
